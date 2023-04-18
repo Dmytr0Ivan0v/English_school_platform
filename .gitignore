@@ -1,0 +1,21 @@
+#######################
+#    Python staff     #
+#######################
+
+__pycache__/
+.idea
+
+# Staticfiles
+staticfiles/
+
+# Environment variables
+.env
+src/trash/
+
+
+#######################
+#       Editors       #
+#######################
+
+# VSCode
+.vscode/
