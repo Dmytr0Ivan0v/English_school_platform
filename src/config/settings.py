@@ -1,3 +1,4 @@
+import os
 from distutils.util import strtobool
 from os import getenv
 from pathlib import Path
@@ -26,7 +27,7 @@ THIRD_PARTY_APPS = [
     "rest_framework_simplejwt",
 ]
 
-LOCAL_APPS = []
+LOCAL_APPS = ["users", "groups"]
 
 INSTALLED_APPS = DGANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
 
@@ -94,6 +95,8 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+# Set custom user model
+AUTH_USER_MODEL = "users.User"
 
 LANGUAGE_CODE = "en-us"
 TIME_ZONE = "UTC"
@@ -103,4 +106,9 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 STATIC_ROOT = ROOT_DIR / "staticfiles"
-STATIC_URL = "static/"
+STATIC_URL = "/static/"
+STATICFILES_DIRS = []
+
+
+MEDIA_ROOT = os.path.join(ROOT_DIR, "media")
+MEDIA_URL = "/media/"
