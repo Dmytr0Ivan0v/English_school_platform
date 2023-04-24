@@ -1,0 +1,16 @@
+{% extends "hometasks/base.html" %}
+{% block title %}My hometasks{% endblock %}
+{% block content %}
+    <h1>My hometasks</h1>
+    {% for hometask in hometasks %}
+        <h2>
+            <a href="{% url 'hometask:hometask_retrieve' hometask.id %}">
+                {{ hometask.title }}
+            </a>
+        </h2>
+        <p class="date">
+            {{ hometask.created_at }}
+        </p>
+        {{ hometask.body|truncatewords:30|linebreaks }}
+    {% endfor %}
+{% endblock %}

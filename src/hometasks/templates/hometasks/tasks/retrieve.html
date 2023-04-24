@@ -1,0 +1,9 @@
+{% extends "hometasks/base.html" %}
+{% block title %}Hometask{% endblock %}
+{% block content %}
+    <h1>{{hometask.title}}</h1>
+    <p class="date">
+        {{ hometask.created_at }}
+    </p>
+    {{ hometask.body|linebreaks }}
+{% endblock %}

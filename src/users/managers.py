@@ -19,7 +19,6 @@ class UserManager(_UserManager):
         extra_fields["is_staff"] = False
         extra_fields["is_superuser"] = False
         extra_fields["role"] = Role.STUDENT
-        # extra_fields["group"] = Group.INDIV
 
         return self._create_user(email, first_name, password, **extra_fields)
 
@@ -27,6 +26,5 @@ class UserManager(_UserManager):
         extra_fields["is_staff"] = True
         extra_fields["is_superuser"] = True
         extra_fields["role"] = Role.ADMIN
-        # extra_fields["group"] = Group.OTHER
 
         return self._create_user(email, first_name, password, **extra_fields)

@@ -27,7 +27,12 @@ THIRD_PARTY_APPS = [
     "rest_framework_simplejwt",
 ]
 
-LOCAL_APPS = ["users", "groups"]
+LOCAL_APPS = [
+    "users",
+    "groups",
+    "hometasks",
+    "comments",
+]
 
 INSTALLED_APPS = DGANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
 

@@ -10,7 +10,7 @@ class User(AbstractBaseUser, PermissionsMixin):
     first_name = models.CharField(max_length=150)
     last_name = models.CharField(max_length=150, null=True, blank=True)
     email = models.EmailField(max_length=50, unique=True)
-    group = models.ForeignKey(Group, on_delete=models.CASCADE, related_name="group", null=True)
+    group = models.ForeignKey(Group, on_delete=models.CASCADE, related_name="students", null=True)
     password = models.CharField(max_length=255)
     last_login = models.DateTimeField(auto_now=True, blank=True, null=True)
     is_staff = models.BooleanField(default=False)
