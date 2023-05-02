@@ -9,3 +9,4 @@ class GroupAdmin(admin.ModelAdmin):
     list_filter = ["group"]
     search_fields = ["group"]
     ordering = ["-created_at"]
+    prepopulated_fields = {"slug": ("title",)}

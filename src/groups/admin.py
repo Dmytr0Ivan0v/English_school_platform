@@ -1,7 +1,7 @@
 from django.contrib import admin
 from groups.models import Group
 
-FIELDS = ["name", "is_intetics"]
+FIELDS = ["name", "is_company"]
 
 
 @admin.register(Group)

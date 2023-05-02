@@ -4,7 +4,7 @@
     <h1>My hometasks</h1>
     {% for hometask in hometasks %}
         <h2>
-            <a href="{% url 'hometask:hometask_retrieve' hometask.id %}">
+            <a href="{{ hometask.get_absolute_url }}">
                 {{ hometask.title }}
             </a>
         </h2>
@@ -13,4 +13,5 @@
         </p>
         {{ hometask.body|truncatewords:30|linebreaks }}
     {% endfor %}
+    {% include "pagination.html" with page=hometasks %}
 {% endblock %}

@@ -1,7 +1,7 @@
 from comments.models import Comment
 from django.contrib import admin
 
-FIELDS = ["hometask", "student"]
+FIELDS = ["hometask", "user"]
 
 
 @admin.register(Comment)
